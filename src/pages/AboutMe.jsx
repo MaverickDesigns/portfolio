@@ -29,6 +29,8 @@ const AboutMe = () => {
           </div>
           <div className="main-about">
             <p className="one">Skills</p>
+            <p className="four">Frontend Developer</p>
+            <ProgressBarComponent progress={0.8``} />
             <p className="four">UX Research</p>
             <ProgressBarComponent progress={0.4} />
             <p className="four">Prototyping</p>

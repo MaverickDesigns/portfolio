@@ -13,26 +13,31 @@ import { PortfolioProvider } from "./store/PortfolioStore";
 import AboutMe from "./pages/AboutMe";
 import Line from "./components/Line";
 import MyProjects from "./pages/MyProjects";
+import Maintenance from "./pages/maintenance";
+import { useEffect } from "react";
 
 const App = () => {
+  
   return (
     <PortfolioProvider>
       <Router>
-        <Navbar />
-        <div className="parent">
-          <div className="left">
+        {/* <Navbar /> */}
+        <div className="">
+          <div className="">
             <Routes>
-              <Route path="/" element={<Home />} />
+              {/* <Route path="/" element={<Home />} /> */}
+              <Route path="/" element={<Maintenance />} />
               <Route path="/about" element={<About />} />
+              <Route path="/maintanance" element={<Maintenance />} />
               <Route path="/aboutme" element={<AboutMe />} />
               <Route path="/myprojects" element={<MyProjects />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </div>
-          <div className="right">
+          {/* <div className="right">
             <DynamicLine />
-          </div>
+          </div> */}
         </div>
       </Router>
     </PortfolioProvider>
